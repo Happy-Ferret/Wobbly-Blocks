@@ -15,7 +15,9 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -71,6 +73,11 @@
                 <instance-variable name="falling" sid="21428840519334" type="boolean" />
                 <instance-variable name="toMove" sid="6912622980154726" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="620778518699718">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1864903642942281" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -101,6 +108,11 @@
         </object-type>
         <object-type name="wall" sid="5479506974201728">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="1925328884031328">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3505219343507923" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
