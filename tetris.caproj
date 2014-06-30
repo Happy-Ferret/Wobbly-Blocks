@@ -15,9 +15,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
-    <used-behaviors>
-        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
-    </used-behaviors>
+    <used-behaviors />
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -32,54 +30,49 @@
         <prop name="Clear background">No</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Off</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Node-Webkit</prop>
         <prop name="Preview mode">HTTP</prop>
         <prop name="Sampling">Linear</prop>
     </configuration-settings>
     <object-folder expanded="1">
         <object-folder expanded="1" name="particles">
-            <object-type name="Particles1" sid="5764420438200756">
+            <object-type name="Particles1" sid="8858863325944143">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
-            <object-type name="Particles0" sid="5546402226104246">
+            <object-type name="Particles0" sid="8550797313147654">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
-            <object-type name="Particles2" sid="6172165052881233">
+            <object-type name="Particles2" sid="6366299082700079">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
-            <object-type name="Particles3" sid="5731698744442372">
+            <object-type name="Particles3" sid="1823638811391193">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
-            <object-type name="Particles4" sid="6988917486252511">
+            <object-type name="Particles4" sid="1577506195568745">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
-            <object-type name="Particles5" sid="8546717965209225">
+            <object-type name="Particles5" sid="8671798116987919">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
-            <object-type name="Particles6" sid="4910948440320872">
+            <object-type name="Particles6" sid="6528798384038512">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
         </object-folder>
-        <object-type name="Sprite" sid="2705599843205426">
+        <object-type name="Sprite" sid="9208189566733388">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="falling" sid="21428840519334" type="boolean" />
-                <instance-variable name="toMove" sid="6912622980154726" type="number" />
+                <instance-variable name="falling" sid="8751453310735312" type="boolean" />
+                <instance-variable name="toMove" sid="3524814289082825" type="number" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="Physics" sid="620778518699718">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1864903642942281" speed="0">
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4485294560432697" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -90,56 +83,51 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="pivot" sid="917750721728179">
+        <object-type name="pivot" sid="3729334443326348">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="nextPiece" sid="3602415203504689" type="number" />
-                <instance-variable name="createNewPiece" sid="6350880541806865" type="boolean" />
-                <instance-variable name="rotateable" sid="8819023876903908" type="boolean" />
+                <instance-variable name="nextPiece" sid="9875176444685374" type="number" />
+                <instance-variable name="createNewPiece" sid="4569101924163044" type="boolean" />
+                <instance-variable name="rotateable" sid="9559944730617139" type="boolean" />
             </instance-variables>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1014686023883038" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="378126907229477" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Keyboard" sid="1868695735640712">
+        <object-type name="Keyboard" sid="1965827101332524">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="wall" sid="5479506974201728">
+        <object-type name="wall" sid="405927731439342">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Physics" sid="1925328884031328">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3505219343507923" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4094657231971955" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="lineDetector" sid="7366048064009156">
+        <object-type name="lineDetector" sid="6377011960294012">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3066021706487529" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8696763916288398" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="6826927327879241">
+        <object-type name="Text" sid="8069037535213946">
             <plugin id="Text" />
             <instance-variables>
-                <instance-variable name="lines" sid="5311778549249156" type="number" />
+                <instance-variable name="lines" sid="8193344631404568" type="number" />
             </instance-variables>
         </object-type>
-        <object-type name="label" sid="7679016735968711">
+        <object-type name="label" sid="3709015432273944">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite2" sid="7385353594489518">
+        <object-type name="Sprite2" sid="3018717228530145">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="10554224232081" speed="0">
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5745367752503197" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -150,23 +138,31 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="7660232536276205">
+        <object-type name="Sprite3" sid="1236038596974533">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8328594098273099" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3101171191548773" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="6292927080797113">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3638762895164654" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
     </object-folder>
     <families>
-        <family name="Family1" plugin-id="Sprite" sid="4935341883126164">
+        <family name="Family1" plugin-id="Sprite" sid="8124906919520046">
             <members>
                 <member>Sprite</member>
                 <member>wall</member>
             </members>
         </family>
-        <family name="explosion" plugin-id="Particles" sid="9227650235985459">
+        <family name="explosion" plugin-id="Particles" sid="7257986430794248">
             <members>
                 <member>Particles0</member>
                 <member>Particles1</member>
