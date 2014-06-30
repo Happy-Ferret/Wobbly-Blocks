@@ -3,188 +3,188 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UberWobbly</name>
     <events>
-        <event-block sid="8418895333116746">
+        <event-block sid="5709778830434528">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="5679449583105782" type="System" />
+                <condition id="-2" name="On start of layout" sid="5310173467086008" type="System" />
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="4759694266019151" type="pivot">
+                <action id="-10" name="Set value" sid="1483932187485663" type="pivot">
                     <param id="0" name="Instance variable">nextPiece</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">int(7)</param>
                 </action>
-                <action id="-9" name="Destroy" sid="2809079764038691" type="Sprite" />
-                <action id="-9" name="Destroy" sid="5919485049259564" type="explosion" />
+                <action id="-9" name="Destroy" sid="1793163299492193" type="Sprite" />
+                <action id="-9" name="Destroy" sid="2484025924768881" type="explosion" />
             </actions>
         </event-block>
-        <event-block sid="7523228213185612">
+        <event-block sid="1937093101431255">
             <conditions>
-                <condition id="0" inverted="1" name="Is spraying" sid="2222712712783132" type="explosion" />
+                <condition id="0" inverted="1" name="Is spraying" sid="1715776000146046" type="explosion" />
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="9377318363881121" type="explosion" />
+                <action id="-9" name="Destroy" sid="3919275227055428" type="explosion" />
             </actions>
         </event-block>
-        <event-block sid="3056564274229038">
+        <event-block sid="7347330554993882">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="5960684350113505" type="pivot">
+                <condition id="-8" name="Is boolean instance variable set" sid="340511155437316" type="pivot">
                     <param id="0" name="Instance variable">createNewPiece</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="5860462147398563" type="pivot">
+                <action id="-13" name="Set boolean" sid="2521980343659829" type="pivot">
                     <param id="0" name="Instance variable">rotateable</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
             <sub-events>
                 <comment>detect/clear lines</comment>
-                <event-block sid="2582338591983348">
+                <event-block sid="4606736238253445">
                     <conditions>
-                        <condition id="-10" name="For" sid="8893163220852807" type="System">
+                        <condition id="-10" name="For" sid="1338427410270127" type="System">
                             <param id="0" name="Name">&quot;&quot;</param>
                             <param id="1" name="Start index">0</param>
                             <param id="2" name="End index">13</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Set Y" sid="1187337424712904" type="lineDetector">
+                        <action id="-2" name="Set Y" sid="9991776982589134" type="lineDetector">
                             <param id="0" name="Y">448-32*loopindex</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="2828139951696083">
+                        <event-block sid="4170148523268059">
                             <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="3591617948489393" type="Sprite">
+                                <condition id="9" name="Is overlapping at offset" sid="2381128992461027" type="Sprite">
                                     <param id="0" name="Object">lineDetector</param>
                                     <param id="1" name="Offset X">0</param>
                                     <param id="2" name="Offset Y">0</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" sid="5825071575697561" type="System">
+                                <condition id="-8" name="Compare two values" sid="6037545355389136" type="System">
                                     <param id="0" name="First value">Sprite.PickedCount</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">9</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="9118486720954625" type="Text">
+                                <action id="-11" name="Add to" sid="2084655815443417" type="Text">
                                     <param id="0" name="Instance variable">lines</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="1455926975986211" type="Text">
+                                <action id="0" name="Set text" sid="2313535871401773" type="Text">
                                     <param id="0" name="Text">self.lines</param>
                                 </action>
                             </actions>
                             <sub-events>
                                 <comment>explosion</comment>
-                                <event-block sid="5915728695652362">
+                                <event-block sid="5990188793768255">
                                     <conditions>
-                                        <condition id="-11" name="For Each" sid="4521272783069802" type="System">
+                                        <condition id="-11" name="For Each" sid="8662916526047888" type="System">
                                             <param id="0" name="Object">Sprite</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="471834902418903" type="Sprite" />
+                                        <action id="-9" name="Destroy" sid="5656360975165047" type="Sprite" />
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="6561807859287165">
+                                        <event-block sid="9877954665462424">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="5751974079473898" type="Sprite">
+                                                <condition id="3" name="Compare frame" sid="8961960289418264" type="Sprite">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="4252280338960338" type="Sprite">
+                                                <action id="0" name="Spawn another object" sid="8467033027298819" type="Sprite">
                                                     <param id="0" name="Object">Particles0</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="1073937564477127">
+                                        <event-block sid="3766793342825196">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="9810580113853628" type="Sprite">
+                                                <condition id="3" name="Compare frame" sid="6588458019607775" type="Sprite">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="6981250037722464" type="Sprite">
+                                                <action id="0" name="Spawn another object" sid="4751287587711021" type="Sprite">
                                                     <param id="0" name="Object">Particles1</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="603246879318237">
+                                        <event-block sid="8776110356467725">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="7331963223467425" type="Sprite">
+                                                <condition id="3" name="Compare frame" sid="376220256130474" type="Sprite">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">2</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="6539060632478625" type="Sprite">
+                                                <action id="0" name="Spawn another object" sid="189910591352672" type="Sprite">
                                                     <param id="0" name="Object">Particles2</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="784882264380033">
+                                        <event-block sid="1217137287572004">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="4644622990154921" type="Sprite">
+                                                <condition id="3" name="Compare frame" sid="1343302170362652" type="Sprite">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">3</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="1684977135976223" type="Sprite">
+                                                <action id="0" name="Spawn another object" sid="7149166632380408" type="Sprite">
                                                     <param id="0" name="Object">Particles3</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="4014502313811869">
+                                        <event-block sid="6422551665634145">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="2375510556557057" type="Sprite">
+                                                <condition id="3" name="Compare frame" sid="7101213654201043" type="Sprite">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">4</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="578738651666786" type="Sprite">
+                                                <action id="0" name="Spawn another object" sid="8914131306221657" type="Sprite">
                                                     <param id="0" name="Object">Particles4</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="4742573017468331">
+                                        <event-block sid="5643407300747281">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="3269734912923373" type="Sprite">
+                                                <condition id="3" name="Compare frame" sid="9837342553239122" type="Sprite">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">5</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="5328516959279045" type="Sprite">
+                                                <action id="0" name="Spawn another object" sid="4256168549593145" type="Sprite">
                                                     <param id="0" name="Object">Particles5</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="7462610358356891">
+                                        <event-block sid="4798328548631735">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="2296169414274587" type="Sprite">
+                                                <condition id="3" name="Compare frame" sid="9883166197892723" type="Sprite">
                                                     <param id="0" name="Comparison">0</param>
                                                     <param id="1" name="Number">6</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="8571963001770426" type="Sprite">
+                                                <action id="0" name="Spawn another object" sid="3821332764672768" type="Sprite">
                                                     <param id="0" name="Object">Particles6</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">0</param>
@@ -194,22 +194,22 @@
                                     </sub-events>
                                 </event-block>
                                 <comment>move lines above</comment>
-                                <event-block sid="9480417438159832">
+                                <event-block sid="847714290336712">
                                     <conditions>
-                                        <condition id="-19" name="Pick all" sid="8363369498894449" type="System">
+                                        <condition id="-19" name="Pick all" sid="3850853989298726" type="System">
                                             <param id="0" name="Object">Sprite</param>
                                         </condition>
-                                        <condition id="-2" name="Compare Y" sid="3982075459172588" type="Sprite">
+                                        <condition id="-2" name="Compare Y" sid="4216107478004818" type="Sprite">
                                             <param id="0" name="Comparison">2</param>
                                             <param id="1" name="Y co-ordinate">lineDetector.Y</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="-23" name="Move at angle" sid="6102832204293558" type="Sprite">
+                                        <action disabled="1" id="-23" name="Move at angle" sid="5702263981482675" type="Sprite">
                                             <param id="0" name="Angle">90</param>
                                             <param id="1" name="Distance">32</param>
                                         </action>
-                                        <action id="-11" name="Add to" sid="4225369770866365" type="Sprite">
+                                        <action id="-11" name="Add to" sid="4666508892560061" type="Sprite">
                                             <param id="0" name="Instance variable">toMove</param>
                                             <param id="1" name="Value">32</param>
                                         </action>
@@ -220,74 +220,74 @@
                     </sub-events>
                 </event-block>
                 <comment>O</comment>
-                <event-block sid="2815534361400463">
+                <event-block sid="7708293284867302">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9816195664818786" type="pivot">
+                        <condition id="-7" name="Compare instance variable" sid="947154216877287" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="9458802755365199" type="System">
+                        <action id="-3" name="Create object" sid="3857914024712111" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="4510781091963677" type="System">
+                        <action id="-3" name="Create object" sid="7887053367633187" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X+32</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="8341846146012545" type="System">
+                        <action id="-3" name="Create object" sid="7944543870610546" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X+32</param>
                             <param id="3" name="Y">pivot.Y+32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="3993035424105424" type="System">
+                        <action id="-3" name="Create object" sid="1064347739431931" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y+32</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="5047352201899023" type="pivot">
+                        <action id="-13" name="Set boolean" sid="5423600953182316" type="pivot">
                             <param id="0" name="Instance variable">rotateable</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>I</comment>
-                <event-block sid="243447936261444">
+                <event-block sid="4314869346527476">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6385525423509214" type="pivot">
+                        <condition id="-7" name="Compare instance variable" sid="9965180781659566" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="5332935836336622" type="System">
+                        <action id="-3" name="Create object" sid="7751248368294484" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y-32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="8568473858197041" type="System">
+                        <action id="-3" name="Create object" sid="222723412048971" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="2821091790307185" type="System">
+                        <action id="-3" name="Create object" sid="2326235233449513" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y+32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="8924126387060153" type="System">
+                        <action id="-3" name="Create object" sid="1543856523900412" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
@@ -296,34 +296,34 @@
                     </actions>
                 </event-block>
                 <comment>L</comment>
-                <event-block sid="987704130997928">
+                <event-block sid="2752526182736933">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8181615917236417" type="pivot">
+                        <condition id="-7" name="Compare instance variable" sid="5252550076572298" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="6207476288452041" type="System">
+                        <action id="-3" name="Create object" sid="2689841780856181" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y-32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="625880102472006" type="System">
+                        <action id="-3" name="Create object" sid="8350068992075791" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="5288645815610722" type="System">
+                        <action id="-3" name="Create object" sid="1911467671438857" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y+32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="6322304903048367" type="System">
+                        <action id="-3" name="Create object" sid="356399497243662" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X+32</param>
@@ -332,34 +332,34 @@
                     </actions>
                 </event-block>
                 <comment>J</comment>
-                <event-block sid="604557598873725">
+                <event-block sid="1209528053947466">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9188370852834503" type="pivot">
+                        <condition id="-7" name="Compare instance variable" sid="2100620758708256" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="8032669053473526" type="System">
+                        <action id="-3" name="Create object" sid="4668681213621976" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y-32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="7290416474191038" type="System">
+                        <action id="-3" name="Create object" sid="2645899974838257" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="2461662827001635" type="System">
+                        <action id="-3" name="Create object" sid="6392165643076429" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y+32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="9572584965315961" type="System">
+                        <action id="-3" name="Create object" sid="149790199671977" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X-32</param>
@@ -368,34 +368,34 @@
                     </actions>
                 </event-block>
                 <comment>S</comment>
-                <event-block sid="1753464579232554">
+                <event-block sid="9683557812467949">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4749492272892112" type="pivot">
+                        <condition id="-7" name="Compare instance variable" sid="7287093797158956" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="5384897013175781" type="System">
+                        <action id="-3" name="Create object" sid="1672165080843673" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y-32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="6999609557805159" type="System">
+                        <action id="-3" name="Create object" sid="5322245084145419" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="3008053656039149" type="System">
+                        <action id="-3" name="Create object" sid="2677037867301149" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X+32</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="4502945559488638" type="System">
+                        <action id="-3" name="Create object" sid="4253487491092918" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X+32</param>
@@ -404,34 +404,34 @@
                     </actions>
                 </event-block>
                 <comment>Z</comment>
-                <event-block sid="5985566063751887">
+                <event-block sid="7322935954088601">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4166355455476308" type="pivot">
+                        <condition id="-7" name="Compare instance variable" sid="9378568105375591" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="1841199877403455" type="System">
+                        <action id="-3" name="Create object" sid="7868299402477454" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y-32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="1404124787027028" type="System">
+                        <action id="-3" name="Create object" sid="614739019017695" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="3833113348864997" type="System">
+                        <action id="-3" name="Create object" sid="5417886209212546" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X-32</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="7679594402322279" type="System">
+                        <action id="-3" name="Create object" sid="5294223207160138" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X-32</param>
@@ -440,34 +440,76 @@
                     </actions>
                 </event-block>
                 <comment>T</comment>
-                <event-block sid="1728856801468018">
+                <event-block sid="3466609044414015">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5636964385630923" type="pivot">
+                        <condition id="-7" name="Compare instance variable" sid="104336408038949" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">6</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="9743565843845383" type="System">
+                        <action id="-3" name="Create object" sid="4702813366516716" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y-32</param>
                         </action>
-                        <action id="-3" name="Create object" sid="3897690279916918" type="System">
+                        <action id="-3" name="Create object" sid="3783185656870065" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="8995748212634816" type="System">
+                        <action id="-3" name="Create object" sid="8387329995786252" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X+32</param>
                             <param id="3" name="Y">pivot.Y</param>
                         </action>
-                        <action id="-3" name="Create object" sid="8827177529637119" type="System">
+                        <action id="-3" name="Create object" sid="822969984751609" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">pivot.X</param>
+                            <param id="3" name="Y">pivot.Y+32</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>+</comment>
+                <event-block sid="1930283900859313">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7486928290323519" type="pivot">
+                            <param id="0" name="Instance variable">nextPiece</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="3654932495855201" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">pivot.X</param>
+                            <param id="3" name="Y">pivot.Y-32</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3131561638982418" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">pivot.X</param>
+                            <param id="3" name="Y">pivot.Y</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9948600366374949" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">pivot.X+32</param>
+                            <param id="3" name="Y">pivot.Y</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6433541062250876" type="System">
+                            <param id="0" name="Object to create">Sprite</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">pivot.X-32</param>
+                            <param id="3" name="Y">pivot.Y</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3529498662984982" type="System">
                             <param id="0" name="Object to create">Sprite</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">pivot.X</param>
@@ -476,36 +518,36 @@
                     </actions>
                 </event-block>
                 <comment>color piece</comment>
-                <event-block sid="5860082902216863">
+                <event-block sid="584849205753227">
                     <conditions>
-                        <condition id="-19" name="Pick all" sid="1104157785526782" type="System">
+                        <condition id="-19" name="Pick all" sid="1820691838056977" type="System">
                             <param id="0" name="Object">Sprite</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="7997135165739384" type="Sprite">
+                        <condition id="-8" name="Is boolean instance variable set" sid="6799714721647689" type="Sprite">
                             <param id="0" name="Instance variable">falling</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="4440825253134771" type="Sprite">
+                        <action id="5" name="Set frame" sid="1430352989820798" type="Sprite">
                             <param id="0" name="Frame number">pivot.nextPiece</param>
                         </action>
-                        <action id="9" name="Set scale" sid="2704444709656818" type="Sprite">
+                        <action id="9" name="Set scale" sid="7920411464516641" type="Sprite">
                             <param id="0" name="Scale">0.8</param>
                         </action>
                     </actions>
                     <sub-events>
                         <comment>check for game over</comment>
-                        <event-block sid="7591036434935046">
+                        <event-block sid="105498140638371">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="3153539223026825" type="pivot">
+                                <condition id="1" name="Is overlapping another object" sid="4527099426938901" type="pivot">
                                     <param id="0" name="Object">Family1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Append text" sid="7168542362990664" type="Text">
+                                <action id="1" name="Append text" sid="2726133510597643" type="Text">
                                     <param id="0" name="Text">NewLine &amp; &quot;Game over&quot;</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="9557529718377288" type="System">
+                                <action id="-12" name="Set group active" sid="5376499380696894" type="System">
                                     <param id="0" name="Group name">&quot;Game&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
@@ -514,21 +556,21 @@
                     </sub-events>
                 </event-block>
                 <comment>set next peice</comment>
-                <event-block sid="5402792166030934">
+                <event-block sid="501827685036286">
                     <conditions />
                     <actions>
-                        <action id="9" name="Set scale" sid="5333936151116176" type="Sprite">
+                        <action id="9" name="Set scale" sid="9688337856357897" type="Sprite">
                             <param id="0" name="Scale">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="7039125386444012" type="pivot">
+                        <action id="-13" name="Set boolean" sid="3491880952300001" type="pivot">
                             <param id="0" name="Instance variable">createNewPiece</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="1187424457133747" type="pivot">
+                        <action id="-10" name="Set value" sid="5257243191584822" type="pivot">
                             <param id="0" name="Instance variable">nextPiece</param>
                             <param id="1" name="Value">int(random(7))</param>
                         </action>
-                        <action id="5" name="Set frame" sid="8795341887158009" type="Sprite2">
+                        <action id="5" name="Set frame" sid="4077681686046181" type="Sprite2">
                             <param id="0" name="Frame number">pivot.nextPiece</param>
                         </action>
                     </actions>
@@ -536,45 +578,45 @@
             </sub-events>
         </event-block>
         <comment>line move</comment>
-        <event-block sid="8611369276537264">
+        <event-block sid="3965319964532221">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="7449719024596147" type="Sprite">
+                <condition id="-7" name="Compare instance variable" sid="6961069621187653" type="Sprite">
                     <param id="0" name="Instance variable">toMove</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="3286143417058779" type="Sprite">
+                <action id="-23" name="Move at angle" sid="6922704779236985" type="Sprite">
                     <param id="0" name="Angle">90</param>
                     <param id="1" name="Distance">400</param>
                 </action>
-                <action id="-12" name="Subtract from" sid="6150536132333777" type="Sprite">
+                <action id="-12" name="Subtract from" sid="2957945710201413" type="Sprite">
                     <param id="0" name="Instance variable">toMove</param>
                     <param id="1" name="Value">400</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7868263828566658">
+        <event-block sid="7241532378080085">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="4027032879463391" type="Sprite">
+                <condition id="-7" name="Compare instance variable" sid="9963447367240532" type="Sprite">
                     <param id="0" name="Instance variable">toMove</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="5832230601166517" type="Sprite">
+                <action id="-23" name="Move at angle" sid="5444997548464155" type="Sprite">
                     <param id="0" name="Angle">90</param>
                     <param id="1" name="Distance">self.toMove</param>
                 </action>
-                <action id="-10" name="Set value" sid="9262301714947912" type="Sprite">
+                <action id="-10" name="Set value" sid="4498704909743331" type="Sprite">
                     <param id="0" name="Instance variable">toMove</param>
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="1482933260906374" title="Game2">
+        <event-group description="" sid="7315360531422482" title="Game2">
             <sub-events>
                 <comment>rotate. if overlapping? then rotate back</comment>
                 <event-block sid="8930393653451215">
@@ -809,7 +851,7 @@
                 <event-block any="1" sid="7833682311887607">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="9530714386398633" type="System">
-                            <param id="0" name="Interval (seconds)">0.5/(1+Text.lines/15)</param>
+                            <param id="0" name="Interval (seconds)">0.5</param>
                         </condition>
                         <condition id="2" name="Key is down" sid="7652802288893663" type="Keyboard">
                             <param id="0" name="Key">40 (Down arrow)</param>
@@ -896,31 +938,105 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="4063688466574436">
+        <event-block sid="8427227550416882">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="5000699471517899" type="Sprite4">
+                <condition id="1" name="Is overlapping another object" sid="2776967755019343" type="Sprite4">
                     <param id="0" name="Object">Sprite</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8132231204426064" type="Sprite">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3295239919805862" type="Sprite">
                     <param id="0" name="Instance variable">falling</param>
+                </condition>
+                <condition id="-7" name="Compare time" sid="3819687501307018" type="System">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Time (seconds)">0.5</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="4856139994875249" type="System" />
+                <action id="-26" name="Restart layout" sid="9252307821441275" type="System" />
             </actions>
         </event-block>
-        <event-block sid="6908989520171827">
+        <event-block sid="2988589547311533">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="5232200662811647" type="System">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6136705355250671" type="Sprite">
+                    <param id="0" name="Instance variable">falling</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="2719638444080235" type="System">
                     <param id="0" name="Interval (seconds)">random(10,30)</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="822180681004159" type="Sprite">
-                    <param id="0" name="Instance variable">falling</param>
+                <condition id="-2" name="Compare Y" sid="4903740451831103" type="Sprite">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">128</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Physics" id="21" name="Set immovable" sid="5805865502217524" type="Sprite">
+                <action behavior="Physics" id="21" name="Set immovable" sid="9182573791950764" type="Sprite">
                     <param id="0" name="Setting">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9171397498166617">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8777078176353053" type="Sprite">
+                    <param id="0" name="Instance variable">falling</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="1822489446835443" type="10p">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="6631244707323352" type="System">
+                    <param id="0" name="Interval (seconds)">30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="31025847889506" type="Text">
+                    <param id="0" name="Instance variable">lines</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="0" name="Set text" sid="7956820929705093" type="Text">
+                    <param id="0" name="Text">self.lines</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8325338182399416">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4434384860714332" type="Sprite">
+                    <param id="0" name="Instance variable">falling</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="6646551107745106" type="100p">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="6326907860446688" type="System">
+                    <param id="0" name="Interval (seconds)">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="3086891315856449" type="Text">
+                    <param id="0" name="Instance variable">lines</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="0" name="Set text" sid="2146408091673962" type="Text">
+                    <param id="0" name="Text">self.lines</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4958734796297563">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5782394343732949" type="Sprite">
+                    <param id="0" name="Instance variable">falling</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="4468243177564235" type="1000p">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="3743049660755538" type="System">
+                    <param id="0" name="Interval (seconds)">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="6249533951031624" type="Text">
+                    <param id="0" name="Instance variable">lines</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="0" name="Set text" sid="3103698674862734" type="Text">
+                    <param id="0" name="Text">self.lines</param>
                 </action>
             </actions>
         </event-block>

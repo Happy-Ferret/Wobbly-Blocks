@@ -44,7 +44,11 @@
                     <param id="0" name="Object">Wobbly</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-2" name="Go to layout" sid="2726847421627352" type="System">
+                    <param id="0" name="Layout">UberWobbly</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="1847415687277216">
             <conditions>

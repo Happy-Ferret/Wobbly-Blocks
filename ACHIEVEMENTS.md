@@ -9,3 +9,7 @@ Score your first 1,000 points.
 ###Junkie (20)
 
 Play the game for a whole hour.
+
+###Master (30)
+
+Score 5,000 points in UberWobbly-Mode.

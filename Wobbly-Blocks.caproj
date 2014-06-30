@@ -288,14 +288,15 @@
     </families>
     <layout-folder expanded="1">
         <layout>Regular.xml</layout>
+        <layout>UberWobbly.xml</layout>
         <layout>MainMenu.xml</layout>
         <layout>Credits.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Regular.xml</event-sheet>
         <event-sheet>MainMenu.xml</event-sheet>
-        <event-sheet>UberWobbly.xml</event-sheet>
         <event-sheet>Credits.xml</event-sheet>
+        <event-sheet>UberWobbly.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="18" />
