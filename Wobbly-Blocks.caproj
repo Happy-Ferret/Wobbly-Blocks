@@ -1,24 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>tetris</name>
+    <name>Wobbly-Blocks</name>
     <description></description>
     <version>1.0</version>
-    <author>R0J0hound</author>
+    <author>Mark &quot;Happy-Ferret&quot; Bauermeister</author>
     <author-email></author-email>
     <author-website></author-website>
     <app-id></app-id>
     <unique-id>39fpnf8wgsbk0</unique-id>
     <saved-with-version>17300</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Clay.io" id="Clay" version="1">Clay.io</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Brad Larson" id="bulge">Bulge</effect>
+        <effect author="Scirra" id="radialblur">Radial blur</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -31,7 +37,7 @@
     <configuration-settings>
         <prop name="Clear background">No</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Off</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Preview browser">Node-Webkit</prop>
         <prop name="Preview mode">HTTP</prop>
         <prop name="Sampling">Linear</prop>
@@ -78,6 +84,14 @@
                     <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="RadialBlur">
+                    <effect id="radialblur" />
+                </effect-type>
+                <effect-type name="Bulge">
+                    <effect id="bulge" />
+                </effect-type>
+            </effects>
             <animation-folder expanded="1">
                 <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4485294560432697" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -132,14 +146,24 @@
             <instance-variables>
                 <instance-variable name="lines" sid="8193344631404568" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="4519111119095439">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="label" sid="3709015432273944">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Physics" sid="5148444584640192">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="Sprite2" sid="3018717228530145">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5745367752503197" speed="0">
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5745367752503197" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -147,11 +171,26 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="1.875" hotspotY="1.8125" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Sprite3" sid="1236038596974533">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="7877805552148304">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3101171191548773" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -165,6 +204,67 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Start" sid="3626153817682722">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Touch" sid="2402964213740183">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Credits" sid="4864985745238152">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Ground" sid="5286387305082688">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="2723419856602835">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4063890008575587" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="5.66667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CLAY" sid="6015510050792478">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Wobbly" sid="1657154245492647">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="10p" sid="8928723548785761">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5551997938937107" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="5.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1000p" sid="4954317157133638">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7078694851258584" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="31.25" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="100p" sid="5569308430332579">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6146471225052914" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="31.25" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="2207063366362042">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Clayio" sid="6728834324980533">
+            <plugin id="Clay" />
+        </object-type>
+        <object-type name="Browser" sid="2602316882291318">
+            <plugin id="Browser" />
         </object-type>
     </object-folder>
     <families>
@@ -187,13 +287,32 @@
         </family>
     </families>
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>Regular.xml</layout>
+        <layout>MainMenu.xml</layout>
+        <layout>Credits.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Regular.xml</event-sheet>
+        <event-sheet>MainMenu.xml</event-sheet>
+        <event-sheet>UberWobbly.xml</event-sheet>
+        <event-sheet>Credits.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="18" />
+        <global-instance type="Touch" uid="141">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Clayio" uid="149">
+            <properties>
+                <api-key></api-key>
+                <debug-mode>Disabled</debug-mode>
+                <use-clayio-styles>Enabled</use-clayio-styles>
+                <use-clayio-loader>Disabled</use-clayio-loader>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="150" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
