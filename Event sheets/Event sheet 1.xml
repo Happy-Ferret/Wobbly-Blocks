@@ -909,5 +909,20 @@
                 <action id="-26" name="Restart layout" sid="8275170381311027" type="System" />
             </actions>
         </event-block>
+        <event-block sid="1176644970614798">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5363863422565856" type="System">
+                    <param id="0" name="Interval (seconds)">10</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4160450133160123" type="Sprite">
+                    <param id="0" name="Instance variable">falling</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="21" name="Set immovable" sid="23853084675367" type="Sprite">
+                    <param id="0" name="Setting">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
