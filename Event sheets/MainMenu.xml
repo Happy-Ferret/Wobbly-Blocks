@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainMenu</name>
     <events>
+        <variable constant="0" name="Playtime" sid="7964411944827184" static="0" type="number">0</variable>
         <event-block sid="8993054637617922">
             <conditions>
                 <condition id="3" name="On touched object" sid="57636942503584" type="Touch">
@@ -45,7 +46,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="2726847421627352" type="System">
+                <action id="-2" name="Go to layout" sid="8615714407006758" type="System">
                     <param id="0" name="Layout">UberWobbly</param>
                 </action>
             </actions>
@@ -68,6 +69,23 @@
                 <action id="-27" name="Set effect enabled" sid="6803089952343871" type="Sprite">
                     <param id="0" name="Mode">0</param>
                     <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1507178883149859">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6424571115173738" type="System">
+                    <param id="0" name="Variable">Playtime</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3600</param>
+                </condition>
+                <condition id="1" name="Is online" sid="4189947563656215" type="Browser" />
+                <condition id="0" name="Clay.io Ready" sid="1426767954181148" type="Clayio" />
+            </conditions>
+            <actions>
+                <action id="6" name="Award Achievement" sid="2056477700323375" type="Clayio">
+                    <param id="0" name="Achievement ID">4733</param>
+                    <param id="1" name="Show Notification">0</param>
                 </action>
             </actions>
         </event-block>

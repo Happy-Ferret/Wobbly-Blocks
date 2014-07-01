@@ -10,12 +10,14 @@
     <unique-id>39fpnf8wgsbk0</unique-id>
     <saved-with-version>17300</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Clay.io" id="Clay" version="1">Clay.io</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -33,6 +35,7 @@
         <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>MainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -162,6 +165,11 @@
         </object-type>
         <object-type name="Sprite2" sid="3018717228530145">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="3543381655735401">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5745367752503197" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -172,7 +180,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="1.875" hotspotY="1.8125" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="1" y="1" />
@@ -266,6 +274,13 @@
         <object-type name="Browser" sid="2602316882291318">
             <plugin id="Browser" />
         </object-type>
+        <object-type name="Audio" sid="8299223850937579">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="TiledBackground" sid="233501599954306">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Family1" plugin-id="Sprite" sid="8124906919520046">
@@ -287,9 +302,9 @@
         </family>
     </families>
     <layout-folder expanded="1">
+        <layout>MainMenu.xml</layout>
         <layout>Regular.xml</layout>
         <layout>UberWobbly.xml</layout>
-        <layout>MainMenu.xml</layout>
         <layout>Credits.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
@@ -307,16 +322,33 @@
         </global-instance>
         <global-instance type="Clayio" uid="149">
             <properties>
-                <api-key></api-key>
+                <api-key>wobbly</api-key>
                 <debug-mode>Disabled</debug-mode>
                 <use-clayio-styles>Enabled</use-clayio-styles>
                 <use-clayio-loader>Disabled</use-clayio-loader>
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="150" />
+        <global-instance type="Audio" uid="176">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <music-folder expanded="1">
+        <file name="Wobbly.ogg" />
+    </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
